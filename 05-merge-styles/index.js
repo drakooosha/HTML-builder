@@ -8,13 +8,11 @@ fs.readdir('05-merge-styles/styles',{withFileTypes : true},async (err,files) => 
     if(path.extname(files[i].name) == '.css') {
       let data = await makeResult(files[i].name);
       data.forEach(element => {
-        console.log(element);
         write.write(element);
       });
     }
   }
 })
-
 
 async function makeResult(url) {
   return new Promise((resolve,reject) => {
