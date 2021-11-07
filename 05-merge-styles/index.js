@@ -14,7 +14,7 @@ fs.readdir('05-merge-styles/styles',{withFileTypes : true},async (err,files) => 
   }
 })
 
-async function makeResult(url) {
+function makeResult(url) {
   return new Promise((resolve,reject) => {
     const result = [];
     fs.createReadStream('05-merge-styles/styles/' + url)
